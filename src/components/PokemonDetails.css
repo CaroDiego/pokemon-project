@@ -1,0 +1,22 @@
+.selected-pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-container {
+  text-align: center;
+  background-color: rgb(109, 88, 148);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pokemon-img {
+  width: 200px;
+}
+
+.text {
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}

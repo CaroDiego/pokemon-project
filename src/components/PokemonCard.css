@@ -1,0 +1,24 @@
+.pokemon-card {
+  width: 200px;
+  height: 300px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+
+  .text {
+    margin: 0;
+  }
+
+  .pokemon-img {
+    width: 100%;
+  }
+}
+
+.pokemon-card:hover {
+  background-color: rgb(54, 90, 144);
+}
