@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PokemonCard from "./PokemonCard";
 import "./PokemonList.css";
 import GetForm from "./GetForm";
+import { PokemonContext } from "../context/pokemon.context";
 
 function PokemonList(props) {
-  const [pokemons, setPokemons] = useState([]);
-
+  const { pokemons, setPokemons } = useContext(PokemonContext);
   useEffect(() => {
-    getPokemons(1,10);
+    getPokemons(1, 10);
   }, []);
 
   const fetchPokemon = async (indice) => {
@@ -29,7 +29,7 @@ function PokemonList(props) {
   const pokemonCards = pokemons.map((pokemon) => {
     return (
       <PokemonCard
-        // key={pokemon.id}
+         key={pokemon.id}
         pokemon={pokemon}
         selectPokemon={props.selectPokemon}
       ></PokemonCard>
