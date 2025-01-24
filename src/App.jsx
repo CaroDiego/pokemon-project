@@ -6,7 +6,7 @@ import { lazy, Suspense } from "react";
 // import PokemonPage from "./pages/PokemonPage";
 // import ErrorPage from "./pages/ErrorPage";
 
-//*Sirve para que no se cargue todo al inicio, sino que se cargue solo cuando se necesite
+//*Sirve para que no se cargue todos las paginas al inicio, sino que se cargue solo cuando se necesite
 //!Hacer en proyectos grandes
 const PokemonsPage = lazy(() => import("./pages/PokemonsPage"));
 const PokemonPage = lazy(() => import("./pages/PokemonPage"));
