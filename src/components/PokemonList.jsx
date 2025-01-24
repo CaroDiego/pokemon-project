@@ -5,16 +5,12 @@ import GetForm from "./GetForm";
 import { PokemonContext } from "../context/pokemon.context";
 
 function PokemonList(props) {
-  const { pokemons, setPokemons } = useContext(PokemonContext);
+  const { pokemons, setPokemons, fetchPokemon } = useContext(PokemonContext);
   useEffect(() => {
     getPokemons(1, 10);
   }, []);
 
-  const fetchPokemon = async (indice) => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${indice}`);
-    const data = await response.json();
-    return data;
-  };
+
 
   const getPokemons = async (from, to) => {
     const pkmnArr = [];
