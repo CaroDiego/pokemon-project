@@ -1,11 +1,17 @@
 import "./PokemonCard.css";
-import { useState, useEffect } from "react";
+import { memo } from "react";
 
 function PokemonCard(props) {
   const { pokemon, selectPokemon, selectPokemon2 } = props;
 
+  console.log("Pokemon Card Rendered");
+
   return pokemon.id ? (
-    <li className="pokemon-card" onClick={() => selectPokemon(pokemon)} onAuxClick={() => selectPokemon2(pokemon)}>
+    <li
+      className="pokemon-card"
+      onClick={() => selectPokemon(pokemon)}
+      onAuxClick={() => selectPokemon2(pokemon)}
+    >
       <h2 className="pokemon-name">{pokemon.name}</h2>
       <img
         src={pokemon.sprites.front_default}
@@ -20,3 +26,4 @@ function PokemonCard(props) {
 }
 
 export default PokemonCard;
+//export default memo(PokemonCard);

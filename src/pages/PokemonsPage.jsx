@@ -7,7 +7,7 @@ import DetailsWrapper from "../hoc/DetailsWrapper";
 import { UserContext } from "../context/user.context";
 
 function PokemonsPage() {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   if (!user.isLogged) return <Navigate to={"/error"} />;
 
   const [selectedPokemon, setSelectedPokemon] = useState();
@@ -35,6 +35,12 @@ function PokemonsPage() {
 
   return (
     <main className="main">
+      {user.name && (
+        <section>
+          <h2>Bienvenido {user.name}</h2>
+          <button onClick={() => setUser({...user, name:"Pedro"})}>Change Name</button>
+        </section>
+      )}
       <h2>Pokemons Seleccionados</h2>
       {selectedPokemon && (
         <DetailsWrapper render={getDetails1}></DetailsWrapper>
