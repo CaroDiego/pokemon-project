@@ -3,4 +3,5 @@
 Projecto inicial del Curso de React intermido de OpenWebinars
 
 [Curso OpenWebinars](https://openwebinars.net/academia/portada/react-intermedio/)
-[Repisotiro del Curso](https://github.com/Amaza-ing/OW-React-Intermidiate-Course)
+<br>
+[Repositoro del Curso](https://github.com/Amaza-ing/OW-React-Intermidiate-Course)
