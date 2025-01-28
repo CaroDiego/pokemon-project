@@ -37,7 +37,7 @@ function PokemonsPage() {
     <main className="main">
       {user.name && (
         <section>
-          <h2>Bienvenido {user.name}</h2>
+          <h2 data-testid="user-bienvenido">Bienvenido {user.name}</h2>
           <button onClick={() => setUser({...user, name:"Pedro"})}>Change Name</button>
         </section>
       )}
@@ -48,18 +48,18 @@ function PokemonsPage() {
       {selectedPokemon2 && (
         <DetailsWrapper render={getDetails2}></DetailsWrapper>
       )}
-      {/* {selectedPokemon && (
+      {selectedPokemon && (
         <PokemonDetails pokemon={selectedPokemon}></PokemonDetails>
       )}
       {selectedPokemon2 && (
         <PokemonDetails2 pokemon={selectedPokemon2}></PokemonDetails2>
-      )} */}
+      )}
 
       <h2>Lista de Pokemons</h2>
-      <PokemonList
+      {/* <PokemonList
         selectPokemon={setSelectedPokemon}
         selectPokemon2={setSelectedPokemon2}
-      ></PokemonList>
+      ></PokemonList> */}
     </main>
   );
 }
